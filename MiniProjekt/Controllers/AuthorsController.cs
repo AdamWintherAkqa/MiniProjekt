@@ -27,11 +27,11 @@ namespace MiniProjekt.Controllers
 
         // GET: api/Authors
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Author>>> GetAuthor()
+        public async Task<ActionResult> GetAllAuthors()
         {
             try
             {
-                return await context.GetAllAuthors();
+                return Ok(await context.GetAllAuthors()); // Ok kan typecast 99% af alt kode whoo!
             }
             catch (Exception ex)
             {
@@ -99,7 +99,7 @@ namespace MiniProjekt.Controllers
         //// POST: api/Authors
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public ActionResult<Author> PostAuthor(Author author)
+        public async Task<ActionResult<Author>> PostAuthor(Author author)
         {
             if (author == null)
             {
@@ -107,7 +107,7 @@ namespace MiniProjekt.Controllers
             }
             try
             {
-                context.CreateAuthor(author);
+                await context.CreateAuthor(author);
 
                 return CreatedAtAction("GetBook", new { id = author.AuthorId }, author);
             }

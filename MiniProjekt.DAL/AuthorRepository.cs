@@ -13,7 +13,7 @@ namespace MiniProjekt.DAL
     {
         Task<List<Author>> GetAllAuthors();
         Author GetAuthorById(int id);
-        void CreateAuthor(Author author);
+        Task<int> CreateAuthor(Author author);
         Task<int> DeleteAuthorById(int id);
 
     }
@@ -32,10 +32,10 @@ namespace MiniProjekt.DAL
         {
             return context.Author.FirstOrDefault((authorObj) => authorObj.AuthorId == id);
         }
-        public void CreateAuthor(Author author)
+        public async Task<int> CreateAuthor(Author author)
         {
             context.Author.Add(author);
-            context.SaveChanges();
+            return await context.SaveChangesAsync();
         }
         public async Task<int> DeleteAuthorById(int id)
         {
