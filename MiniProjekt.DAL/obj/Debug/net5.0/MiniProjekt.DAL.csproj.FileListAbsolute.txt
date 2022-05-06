@@ -1,0 +1,15 @@
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.deps.json
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.runtimeconfig.json
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.runtimeconfig.dev.json
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.dll
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.pdb
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.csproj.AssemblyReference.cache
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.AssemblyInfoInputs.cache
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.AssemblyInfo.cs
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.csproj.CoreCompileInputs.cache
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.dll
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\refint\MiniProjekt.DAL.dll
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.pdb
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.genruntimeconfig.cache
+C:\Users\adam.winther\source\repos\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\ref\MiniProjekt.DAL.dll
