@@ -14,7 +14,7 @@ namespace MiniProjekt.DAL
         Task<List<Book>> GetAllBooks();
         Book GetBookById(int id);
         void CreateBook(Book book);
-        void DeleteBookById(int id);
+        Task DeleteBookById(int id);
     }
     public class BookRepository : IBookRepository
     {
@@ -37,7 +37,7 @@ namespace MiniProjekt.DAL
             context.Book.Add(book);
             context.SaveChanges();
         }
-        public void DeleteBookById(int id)
+        public async Task DeleteBookById(int id)
         {
             Book item = context.Book.Where(item => item.BookId == id).Single();
             context.Remove(item);

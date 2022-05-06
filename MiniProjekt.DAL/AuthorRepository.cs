@@ -14,7 +14,7 @@ namespace MiniProjekt.DAL
         Task<List<Author>> GetAllAuthors();
         Author GetAuthorById(int id);
         void CreateAuthor(Author author);
-        void DeleteAuthorById(int id);
+        Task<int> DeleteAuthorById(int id);
 
     }
     public class AuthorRepository : IAuthorRepository
@@ -34,11 +34,22 @@ namespace MiniProjekt.DAL
         }
         public void CreateAuthor(Author author)
         {
-
+            context.Author.Add(author);
+            context.SaveChanges();
         }
-        public void DeleteAuthorById(int id)
+        public async Task<int> DeleteAuthorById(int id)
         {
-
+            Author item = context.Author.Where(item => item.AuthorId == id).Single();
+            if (item != null)
+            {
+                context.Author.Remove(item);
+                return await context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception("Author not found");
+            }
+            
         }
     }
 }

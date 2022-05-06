@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjekt", "MiniProjekt\MiniProjekt.csproj", "{9F5F1653-FF89-4575-A343-F5EE5F5DC1C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjekt", "MiniProjekt\MiniProjekt.csproj", "{9F5F1653-FF89-4575-A343-F5EE5F5DC1C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjekt.DAL", "MiniProjekt.DAL\MiniProjekt.DAL.csproj", "{8BFBD05C-753B-47D3-94C3-CF2EE05141EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProjekt.DAL", "MiniProjekt.DAL\MiniProjekt.DAL.csproj", "{8BFBD05C-753B-47D3-94C3-CF2EE05141EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjekt.Test", "MiniProjekt.Test\MiniProjekt.Test.csproj", "{F80F6996-4D32-47EF-BF94-2D1F287409AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8BFBD05C-753B-47D3-94C3-CF2EE05141EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFBD05C-753B-47D3-94C3-CF2EE05141EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFBD05C-753B-47D3-94C3-CF2EE05141EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80F6996-4D32-47EF-BF94-2D1F287409AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80F6996-4D32-47EF-BF94-2D1F287409AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80F6996-4D32-47EF-BF94-2D1F287409AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80F6996-4D32-47EF-BF94-2D1F287409AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

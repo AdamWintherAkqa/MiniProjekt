@@ -11,6 +11,9 @@ using MiniProjekt.DAL.Database.Models;
 
 namespace MiniProjekt.Controllers
 {
+    /// <summary>
+    /// Handles all requests for the user
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthorsController : ControllerBase
@@ -26,22 +29,41 @@ namespace MiniProjekt.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> GetAuthor()
         {
-            return await context.GetAllAuthors();
+            try
+            {
+                return await context.GetAllAuthors();
+            }
+            catch (Exception ex)
+            {
+                return (ActionResult)BadRequest(ex.Message);
+            }
         }
 
         //GET: api/Authors/5
         [HttpGet("{id}")]
-        //public async Task<ActionResult<Author>> GetAuthor(int id)
-        //{
-        //    var author = await _context.Author.FindAsync(id);
+        public ActionResult<Author> GetAuthor(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
 
-        //    if (author == null)
-        //    {
-        //        return NotFound();
-        //    }
+            try
+            {
+                var author = context.GetAuthorById(id);
 
-        //    return author;
-        //}
+                if (author == null)
+                {
+                    return NotFound();
+                }
+
+                return author;
+            }
+            catch (Exception ex)
+            {
+                return (ActionResult)BadRequest(ex.Message);
+            }
+        }
 
         //// PUT: api/Authors/5
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -77,30 +99,50 @@ namespace MiniProjekt.Controllers
         //// POST: api/Authors
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Author>> PostAuthor(Author author)
+        public ActionResult<Author> PostAuthor(Author author)
         {
-            AbContext _context = new AbContext();
-            _context.Author.Add(author);
-            await _context.SaveChangesAsync();
+            if (author == null)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                context.CreateAuthor(author);
 
-            return CreatedAtAction("GetAuthor", new { id = author.AuthorId }, author);
+                return CreatedAtAction("GetBook", new { id = author.AuthorId }, author);
+            }
+            catch (Exception ex)
+            {
+                return (ActionResult)BadRequest(ex.Message);
+            }
         }
 
         //// DELETE: api/Authors/5
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteAuthor(int id)
-        //{
-        //    var author = await _context.Author.FindAsync(id);
-        //    if (author == null)
-        //    {
-        //        return NotFound();
-        //    }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAuthor(int id)
+        {
+            if (id == 0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var response = await context.DeleteAuthorById(id);
+                if (response != 0)
+                {
+                    return Ok(response);
+                }
+                else
+                {
+                    return NotFound(response);
+                }
 
-        //    _context.Author.Remove(author);
-        //    await _context.SaveChangesAsync();
-
-        //    return NoContent();
-        //}
+            }
+            catch (Exception ex)
+            {
+                return (ActionResult)BadRequest(ex.Message);
+            }
+        }
 
         //private bool AuthorExists(int id)
         //{

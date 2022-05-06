@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T4lIf/ryEjWUE/reAYlNfOSIKtHrq/89fSUudz5wdXqjdxNWKiqmwCKYnWcUpxb212z+tLahhGVzzocbyXC1cw==",
+  "dgSpecHash": "hyqlmy/dSRS3rGTiuA3jxw0uYXjf8PqhQK4ChJfrmLHiKAdvr95EgK0OGiESK/JPtg2CxXBjxcMZsCAQ+bmxVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adam.winther\\source\\repos\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj",
+  "projectFilePath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adam.winther\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
