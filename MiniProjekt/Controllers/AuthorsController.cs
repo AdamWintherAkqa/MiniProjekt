@@ -22,26 +22,45 @@ namespace MiniProjekt.Controllers
 
         public AuthorsController(IAuthorRepository _context)
         {
-            context = _context;
+            context = _context ?? throw new ArgumentNullException(nameof(_context));
         }
 
         // GET: api/Authors
         [HttpGet]
-        public async Task<ActionResult> GetAllAuthors()
+        public async Task<IActionResult> GetAllAuthors()
         {
             try
             {
-                return Ok(await context.GetAllAuthors()); // Ok kan typecast 99% af alt kode whoo!
+                List<Author> result = await context.GetAllAuthors(); // Ok kan typecast 99% af alt kode whoo!
+                if (result == null)
+                {
+                    return StatusCode(500);
+                }
+
+                if (result.Count == 0)
+                {
+                    return NoContent();
+                }
+
+                else
+                {
+                    return Ok(result);
+                }
+                
             }
             catch (Exception ex)
             {
-                return (ActionResult)BadRequest(ex.Message);
+                return (ActionResult)StatusCode(500, ex);
             }
         }
 
+        //Eksempel på hvordan man manuelt kan ændre URL'en på en controller, så man får både en dynamisk værdi med, og den statiske adresse
+        //Der bliver også default lagt noget på URL'en. Denne URL ser sådan ud: api/Authors/GetAuthorById/
+        //Kan være smart for debugging at nemt tjekke URL'en og se præcis hvilken controller der bliver kaldet.
+
         //GET: api/Authors/5
-        [HttpGet("{id}")]
-        public ActionResult<Author> GetAuthor(int id)
+        [HttpGet("GetAuthorById/{id:int:min(1)}")]
+        public async Task<ActionResult<Author>> GetAuthor(int id)
         {
             if (id == 0)
             {
@@ -56,14 +75,19 @@ namespace MiniProjekt.Controllers
                 {
                     return NotFound();
                 }
-
-                return author;
+                
+                return await author;
             }
             catch (Exception ex)
             {
                 return (ActionResult)BadRequest(ex.Message);
             }
         }
+        
+        
+        //default url
+        //GET: api/Authors/5
+        
 
         //// PUT: api/Authors/5
         //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -109,7 +133,7 @@ namespace MiniProjekt.Controllers
             {
                 await context.CreateAuthor(author);
 
-                return CreatedAtAction("GetBook", new { id = author.AuthorId }, author);
+                return CreatedAtAction("GetAuthor", new { id = author.AuthorId }, author);
             }
             catch (Exception ex)
             {
@@ -118,7 +142,7 @@ namespace MiniProjekt.Controllers
         }
 
         //// DELETE: api/Authors/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int:min(1)}")]
         public async Task<IActionResult> DeleteAuthor(int id)
         {
             if (id == 0)

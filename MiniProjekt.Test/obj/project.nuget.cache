@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w9B7CvIaNDARtXoe0kXu/lNy7QEFSR1i5mwhT7lCCnBy5lKSM0mBGa8/0aJ/ui65P9RrI/wpnzC6mfciAqIgvA==",
+  "dgSpecHash": "nd20x/NEo1xd8KB80EY8Av8AcJGu1muWDUXr9T6VKyAxn4pnmmyHDua03gSf7m4T2pBxvDKCNxhswZkDkDHJnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.Test\\MiniProjekt.Test.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.16\\microsoft.entityframeworkcore.5.0.16.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.16\\microsoft.entityframeworkcore.abstractions.5.0.16.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.16\\microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512",
+    "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.16\\microsoft.entityframeworkcore.inmemory.5.0.16.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.16\\microsoft.entityframeworkcore.relational.5.0.16.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.16\\microsoft.entityframeworkcore.sqlserver.5.0.16.nupkg.sha512",
     "C:\\Users\\adam.winther\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

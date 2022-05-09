@@ -58,9 +58,59 @@ namespace MiniProjekt.Test
         }
 
         [Fact]
-        public async void Get_ShouldReturnAllAuthors500()
+        public async void getAllAuthors_ListNotExisting()
         {
             //arrange
-            _authorRepo.Setup()
+            _authorRepo.Setup(objOfRepository => objOfRepository.GetAllAuthors()).ReturnsAsync(() => null);
+
+            //act
+            var result = await _sut.GetAllAuthors();
+
+            //assert
+            var statusCodeResult = (IStatusCodeActionResult)result;
+            Assert.Equal(500, statusCodeResult.StatusCode);
+        }
+
+        //Unit test on the controller for 204
+        [Fact]
+        public async void GetAll_ShouldReturnStatusCode204_WhenNoAUthorExists()
+        {
+            //arrange
+            List<Author> authors = new();
+            _authorRepo.Setup(x => x.GetAllAuthors()).ReturnsAsync(authors);
+
+            //act
+            var result = await _sut.GetAllAuthors();
+
+            //assert
+            var statusCodeResult = (IStatusCodeActionResult)result;
+            Assert.Equal(204, statusCodeResult.StatusCode);
+        }
+
+        [Fact]
+        public async void GetAll_ShouldReturnStatusCode500_WhenNullIsReturnedFromService()
+        {
+            //arrange
+            _authorRepo.Setup(x => x.GetAllAuthors()).ReturnsAsync(() => null);
+            //act
+            var result = await _sut.GetAllAuthors();
+
+            //assert
+            var statusCodeResult = (IStatusCodeActionResult)result;
+            Assert.Equal(500, statusCodeResult.StatusCode);
+        }
+
+        [Fact]
+        public async void GetAll_ShouldReturnStatusCode500_WhenExceptionIsRaised()
+        {
+            //arrange
+            _authorRepo.Setup(x => x.GetAllAuthors()).ReturnsAsync(() => throw new System.Exception("This is an exception"));
+            //act
+            var result = await _sut.GetAllAuthors();
+
+            //assert
+            var statusCodeResult = (IStatusCodeActionResult)result;
+            Assert.Equal(500, statusCodeResult.StatusCode);
         }
     }
+}

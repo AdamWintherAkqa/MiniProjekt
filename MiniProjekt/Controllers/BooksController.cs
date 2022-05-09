@@ -24,21 +24,35 @@ namespace MiniProjekt.Controllers
 
         // GET: api/Books
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBook()
+        public async Task<IActionResult> GetBook()
         {
             try
             {
-                return await context.GetAllBooks();
+                List<Book> result = await context.GetAllBooks();
+                if (result == null)
+                {
+                    return StatusCode(500);
+                }
+
+                if (result.Count == 0)
+                {
+                    return NoContent();
+                }
+
+                else
+                {
+                    return Ok(result);
+                }
             }
             catch (Exception ex)
             {
-                return (ActionResult)BadRequest(ex.Message);
+                return (ActionResult)StatusCode(500, ex);
             }
         }
 
         // GET: api/Books/5
         [HttpGet("{id}")]
-        public ActionResult<Book> GetBook(int id)
+        public async Task<ActionResult<Book>> GetBook(int id)
         {
             if (id == 0)
             {
@@ -54,7 +68,7 @@ namespace MiniProjekt.Controllers
                     return NotFound();
                 }
 
-                return book;
+                return await book;
             }
             catch (Exception ex)
             {
@@ -98,7 +112,7 @@ namespace MiniProjekt.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public ActionResult<Book> PostBook(Book book)
+        public async Task<ActionResult<Book>> PostBook(Book book)
         {
             if (book == null)
             {
@@ -106,7 +120,7 @@ namespace MiniProjekt.Controllers
             }
             try
             {
-                context.CreateBook(book);
+                await context.CreateBook(book);
 
                 return CreatedAtAction("GetBook", new { id = book.BookId }, book);
             }
@@ -119,7 +133,7 @@ namespace MiniProjekt.Controllers
 
         //// DELETE: api/Books/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteBook(int id)
+        public async Task<IActionResult> DeleteBook(int id)
         {
             if (id == 0)
             {
@@ -127,9 +141,15 @@ namespace MiniProjekt.Controllers
             }
             try
             {
-                context.DeleteBookById(id);
-
-                return NoContent();
+                var response = await context.DeleteBookById(id);
+                if (response != 0)
+                {
+                    return Ok(response);
+                }
+                else
+                {
+                    return NotFound(response);
+                }
             }
             catch (Exception ex)
             {

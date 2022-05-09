@@ -12,9 +12,9 @@ namespace MiniProjekt.DAL
     public interface IBookRepository
     {
         Task<List<Book>> GetAllBooks();
-        Book GetBookById(int id);
-        void CreateBook(Book book);
-        Task DeleteBookById(int id);
+        Task<Book> GetBookById(int id);
+        Task<int> CreateBook(Book book);
+        Task<int> DeleteBookById(int id);
     }
     public class BookRepository : IBookRepository
     {
@@ -28,20 +28,27 @@ namespace MiniProjekt.DAL
         {
             return await context.Book.ToListAsync();
         }
-        public Book GetBookById(int id)
+        public async Task<Book> GetBookById(int id)
         {
-            return context.Book.FirstOrDefault((bookObj) => bookObj.BookId == id);
+            return await context.Book.FirstOrDefaultAsync((bookObj) => bookObj.BookId == id);
         }
-        public void CreateBook(Book book)
+        public async Task<int> CreateBook(Book book)
         {
             context.Book.Add(book);
-            context.SaveChanges();
+            return await context.SaveChangesAsync();
         }
-        public async Task DeleteBookById(int id)
+        public async Task<int> DeleteBookById(int id)
         {
             Book item = context.Book.Where(item => item.BookId == id).Single();
-            context.Remove(item);
-            context.SaveChanges();
+            if (item != null)
+            {
+                context.Book.Remove(item);
+                return await context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception("Book not found");
+            }
         }
     }
 }

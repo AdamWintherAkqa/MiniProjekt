@@ -51,7 +51,7 @@ namespace MiniProjekt
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
+            app.UseRouting(); //Siger programmet skal bruge routing middleware
 
             app.UseAuthorization();
 

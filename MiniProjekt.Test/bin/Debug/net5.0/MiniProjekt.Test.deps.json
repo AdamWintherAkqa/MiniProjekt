@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "MiniProjekt.Test/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.16",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "MiniProjekt": "1.0.0",
           "MiniProjekt.DAL": "1.0.0",
@@ -431,6 +432,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.16": {},
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.16": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.16"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "5.0.16.0",
+            "fileVersion": "5.0.1622.16102"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.16": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.16",
@@ -2312,6 +2324,13 @@
       "sha512": "sha512-BiSrqLpJ6dv6xOH1xuHG/85edPfQo5DbuUZJqXNCOm3DD9BjnxaeVYnl2EUdadEUbCTTNVhXT0iKnaOpD5bv6A==",
       "path": "microsoft.entityframeworkcore.analyzers/5.0.16",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8XhoTjMIgfcdvRjeS+9gIiUgVJ+exP69Bp9XIMDBr5jzXwrFivq9YeBm4xsQpAdMFkRlPah+lTYbg+5oUWGODQ==",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.16",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.5.0.16.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.16": {
       "type": "package",

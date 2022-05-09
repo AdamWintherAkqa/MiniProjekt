@@ -12,7 +12,7 @@ namespace MiniProjekt.DAL
     public interface IAuthorRepository
     {
         Task<List<Author>> GetAllAuthors();
-        Author GetAuthorById(int id);
+        Task<Author> GetAuthorById(int id);
         Task<int> CreateAuthor(Author author);
         Task<int> DeleteAuthorById(int id);
 
@@ -25,12 +25,12 @@ namespace MiniProjekt.DAL
             context = _context;
         }
         public async Task<List<Author>> GetAllAuthors()
-        {
+        {           
             return await context.Author.ToListAsync();
         }
-        public Author GetAuthorById(int id)
+        public async Task<Author> GetAuthorById(int id)
         {
-            return context.Author.FirstOrDefault((authorObj) => authorObj.AuthorId == id);
+            return await context.Author.FirstOrDefaultAsync((authorObj) => authorObj.AuthorId == id);
         }
         public async Task<int> CreateAuthor(Author author)
         {

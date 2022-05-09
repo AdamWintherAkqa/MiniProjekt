@@ -219,3 +219,4 @@ C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.Test\obj\Deb
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\MiniProjekt.Test.pdb
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\MiniProjekt.Test.genruntimeconfig.cache
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\ref\MiniProjekt.Test.dll
+C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.Test\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
