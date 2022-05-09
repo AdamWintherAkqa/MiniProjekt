@@ -7,10 +7,10 @@ namespace MiniProjekt.DAL.Database
     {
         public AbContext() { }
         public AbContext(DbContextOptions<AbContext> options) : base(options) { }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=CPH00151\MSSQLSERVER01;Database=flemmingersej;Trusted_Connection=True;");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=CPH00151\MSSQLSERVER01;Database=flemmingersej;Trusted_Connection=True;");
+        //}
 
         public DbSet<Author> Author { get; set; }
         public DbSet<Book> Book { get; set; }
