@@ -152,7 +152,7 @@ namespace MiniProjekt.Controllers
             try
             {
                 var response = await context.DeleteAuthorById(id);
-                if (response != 0)
+                if (response != null)
                 {
                     return Ok(response);
                 }

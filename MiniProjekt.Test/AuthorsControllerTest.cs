@@ -37,7 +37,7 @@ namespace MiniProjekt.Test
 
         //decorates a method in xunit
         [Fact]
-        public async void Get_ShouldReturnAllAuthors200()
+        public async void GetAll_ShouldReturnAllAuthors200()
         {
             //arrange
             List<Author> authors = new List<Author>
@@ -58,7 +58,7 @@ namespace MiniProjekt.Test
         }
 
         [Fact]
-        public async void getAllAuthors_ListNotExisting()
+        public async void GetAll_Authors_ListNotExisting()
         {
             //arrange
             _authorRepo.Setup(objOfRepository => objOfRepository.GetAllAuthors()).ReturnsAsync(() => null);
@@ -112,5 +112,26 @@ namespace MiniProjekt.Test
             var statusCodeResult = (IStatusCodeActionResult)result;
             Assert.Equal(500, statusCodeResult.StatusCode);
         }
+
+        //[Fact]
+        //public async void GetById_ShouldReturnCorrectAuthor200()
+        //{
+        //    //arrange
+        //    List<Author> authors = new List<Author>
+        //    {
+        //        new Author { AuthorId = 1, Name = "Author 1", IsAlive  = true, Password = "123" },
+        //        new Author { AuthorId = 2, Name = "Author 2", IsAlive  = false, Password = "abc" },
+        //        new Author { AuthorId = 3, Name = "Author 3", IsAlive  = true, Password = "dfg" },
+        //    };
+
+        //    _authorRepo.Setup(authorObj => authorObj.GetAuthorById()).ReturnsAsync(authors);
+
+        //    //act
+        //    var result = await _sut.GetAllAuthors();    //Simulerer at vi invoker en metode med masser af data
+        //    var status = (IStatusCodeActionResult)result;
+
+        //    //assert
+        //    Assert.Equal(200, status.StatusCode);
+        //}
     }
 }

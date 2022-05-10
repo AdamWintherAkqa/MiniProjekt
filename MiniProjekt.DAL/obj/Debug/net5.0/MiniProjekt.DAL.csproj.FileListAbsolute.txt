@@ -28,3 +28,18 @@ C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.DAL\obj\Debu
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.pdb
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.genruntimeconfig.cache
 C:\Users\adam.winther\source\repos\MiniProj\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\ref\MiniProjekt.DAL.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.deps.json
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.runtimeconfig.json
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.runtimeconfig.dev.json
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\bin\Debug\net5.0\MiniProjekt.DAL.pdb
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.csproj.AssemblyReference.cache
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.GeneratedMSBuildEditorConfig.editorconfig
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.AssemblyInfoInputs.cache
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.AssemblyInfo.cs
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.csproj.CoreCompileInputs.cache
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\refint\MiniProjekt.DAL.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.pdb
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\MiniProjekt.DAL.genruntimeconfig.cache
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.DAL\obj\Debug\net5.0\ref\MiniProjekt.DAL.dll

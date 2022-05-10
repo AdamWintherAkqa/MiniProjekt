@@ -10233,23 +10233,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adam.winther\\.nuget\\packages\\": {},
+    "C:\\Users\\winth\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.Test\\MiniProjekt.Test.csproj",
+      "projectUniqueName": "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt.Test\\MiniProjekt.Test.csproj",
       "projectName": "MiniProjekt.Test",
-      "projectPath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.Test\\MiniProjekt.Test.csproj",
-      "packagesPath": "C:\\Users\\adam.winther\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.Test\\obj\\",
+      "projectPath": "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt.Test\\MiniProjekt.Test.csproj",
+      "packagesPath": "C:\\Users\\winth\\.nuget\\packages\\",
+      "outputPath": "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\adam.winther\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\winth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10258,18 +10258,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.episerver.com/feed/packages.svc": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj": {
-              "projectPath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj"
+            "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj": {
+              "projectPath": "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt.DAL\\MiniProjekt.DAL.csproj"
             },
-            "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt\\MiniProjekt.csproj": {
-              "projectPath": "C:\\Users\\adam.winther\\source\\repos\\MiniProj\\MiniProjekt\\MiniProjekt\\MiniProjekt.csproj"
+            "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt\\MiniProjekt.csproj": {
+              "projectPath": "G:\\Skole\\H3 flemming\\MiniProjekt\\MiniProjekt\\MiniProjekt\\MiniProjekt.csproj"
             }
           }
         }

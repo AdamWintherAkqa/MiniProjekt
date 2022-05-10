@@ -13,8 +13,8 @@ namespace MiniProjekt.DAL
     {
         Task<List<Author>> GetAllAuthors();
         Task<Author> GetAuthorById(int id);
-        Task<int> CreateAuthor(Author author);
-        Task<int> DeleteAuthorById(int id);
+        Task<Author> CreateAuthor(Author author);
+        Task<Author> DeleteAuthorById(int id);
 
     }
     public class AuthorRepository : IAuthorRepository
@@ -32,23 +32,35 @@ namespace MiniProjekt.DAL
         {
             return await context.Author.FirstOrDefaultAsync((authorObj) => authorObj.AuthorId == id);
         }
-        public async Task<int> CreateAuthor(Author author)
+        public async Task<Author> CreateAuthor(Author author)
         {
             context.Author.Add(author);
-            return await context.SaveChangesAsync();
+            await context.SaveChangesAsync();
+
+            return author;
         }
-        public async Task<int> DeleteAuthorById(int id)
+        public async Task<Author> DeleteAuthorById(int id)
         {
-            Author item = context.Author.Where(item => item.AuthorId == id).Single();
-            if (item != null)
+            try
             {
-                context.Author.Remove(item);
-                return await context.SaveChangesAsync();
+                Author item = context.Author.Where(item => item.AuthorId == id).Single();
+                if (item != null)
+                {
+                    context.Author.Remove(item);
+                    await context.SaveChangesAsync();
+                    return item;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch
             {
-                throw new Exception("Author not found");
+                return null;
             }
+            
+            
             
         }
     }
