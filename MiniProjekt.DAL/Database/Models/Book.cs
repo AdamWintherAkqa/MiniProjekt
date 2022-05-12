@@ -13,5 +13,7 @@ namespace MiniProjekt.DAL.Database.Models
         public int Pages { get; set; }
         public bool Binding { get; set; }
         public DateTime ReleaseYear { get; set; }
+        public int AuthorId { get; set; }
+        public Author Author { get; set; }
     }
 }

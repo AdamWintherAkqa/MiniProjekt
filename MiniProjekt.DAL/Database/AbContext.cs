@@ -9,10 +9,10 @@ namespace MiniProjekt.DAL.Database
         public AbContext(DbContextOptions<AbContext> options) : base(options) { }
 
         //skal udkommenteres hvis repository tests skal virke
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(@"Server=DESKTOP-0IT9HAR;Database=flemmingersej;Trusted_Connection=True;");
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-0IT9HAR;Database=flemmingersej;Trusted_Connection=True;");
+        }
 
         public DbSet<Author> Author { get; set; }
         public DbSet<Book> Book { get; set; }

@@ -442,3 +442,6 @@ G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\r
 G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\MiniProjekt.Test.pdb
 G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\MiniProjekt.Test.genruntimeconfig.cache
 G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\obj\Debug\net5.0\ref\MiniProjekt.Test.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+G:\Skole\H3 flemming\MiniProjekt\MiniProjekt\MiniProjekt.Test\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

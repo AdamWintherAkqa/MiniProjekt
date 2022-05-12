@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniProjekt.DAL.Database;
 
 namespace MiniProjekt.DAL.Migrations
 {
     [DbContext(typeof(AbContext))]
-    partial class AbContextModelSnapshot : ModelSnapshot
+    [Migration("20220512070611_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,9 +27,6 @@ namespace MiniProjekt.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("IsAlive")
                         .HasColumnType("bit");
@@ -50,9 +49,6 @@ namespace MiniProjekt.DAL.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Binding")
                         .HasColumnType("bit");
 
@@ -67,25 +63,7 @@ namespace MiniProjekt.DAL.Migrations
 
                     b.HasKey("BookId");
 
-                    b.HasIndex("AuthorId");
-
                     b.ToTable("Book");
-                });
-
-            modelBuilder.Entity("MiniProjekt.DAL.Database.Models.Book", b =>
-                {
-                    b.HasOne("MiniProjekt.DAL.Database.Models.Author", "Author")
-                        .WithMany("Book")
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Author");
-                });
-
-            modelBuilder.Entity("MiniProjekt.DAL.Database.Models.Author", b =>
-                {
-                    b.Navigation("Book");
                 });
 #pragma warning restore 612, 618
         }

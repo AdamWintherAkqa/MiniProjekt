@@ -133,7 +133,7 @@ namespace MiniProjekt.Controllers
             {
                 await context.CreateAuthor(author);
 
-                return CreatedAtAction("GetAuthor", new { id = author.AuthorId }, author);
+                return author;
             }
             catch (Exception ex)
             {
