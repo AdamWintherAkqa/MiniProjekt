@@ -13,6 +13,5 @@ namespace MiniProjekt.DAL.Database.Models
         public string Password { get; set; }
         public bool IsAlive { get; set; }
         public List<Book> Books { get; set; }
-
     }
 }
