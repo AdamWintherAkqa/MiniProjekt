@@ -59,7 +59,7 @@ namespace MiniProjekt.Controllers
         //Kan være smart for debugging at nemt tjekke URL'en og se præcis hvilken controller der bliver kaldet.
 
         //GET: api/Authors/5
-        [HttpGet("GetAuthorById/{id:int:min(1)}")]
+        [HttpGet("{id:int:min(1)}")]
         public async Task<ActionResult<Author>> GetAuthor(int id)
         {
             if (id == 0)
